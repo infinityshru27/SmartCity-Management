@@ -1,0 +1,49 @@
+               SMART CITY MANAGEMENT 
+1]Classes and Objects :
+	Core Classes:- 
+	a.Citizen -Citizen Id ,name ,age, addresses, privilages.
+	b.ServiceRequest :- requestId , serviceType (electricity, water,garbage) ,status ,timeStamp .
+	c.Vehicle :- vehicleId ,type,ownerId ,regNo.
+	d.TrafficSignal :- SignalId,location , status( red,green ,yellow),timing.
+
+	Specialized Classes(Sub classes):
+	a.Vehicle’s Sub Class :
+		Bus – routeNo,Capacity.
+		Car – fueltype, engineCapacity
+		Bike -helmetRequirement ,engineCapacity
+
+	b.Citizen’s Sub Class :
+		SeniorCitizen – reduceUtility rate ,freeTransportation
+		Students – Discount ,access educational utility
+2] Abstract classes
+	UtilityService :- methods == calculateBill() ,generateinvoice() ,trackUsage().
+
+3]Interfaces
+	NotifiableInterface :- methods== sendNotification() ,sendAlert().
+	TrackableInterface :- methods== trackingRealTimevehicleLocation() , 
+				serviceRequeststatus()
+4] Collection 
+	TreeMap :-  Store service request with time stamp as key for chronological ordering.
+	HashSet :- maintain unit traffic violations to prevent duplicates.
+	priorityQueue :- Urgent services == power outage ,medical emergency.
+	Arraylist :- to store details of vehicle registered under the specific citizens.
+
+5]MultiThreading 
+	---Real time traffic signal Operations using multiple threads for different intersections
+	---Dynamic vehicle routing based on the traffic.
+	---Concurrent processing of multiple services – e.g water supply issue , electric outage issue
+
+6]Exception Handling
+	CustomException : -
+	a.InvalidServiceRequestException – triggered for  request with incorrect or missing details.
+	b.DuplicateRecordException – triggered when adding duplicate traffic violations 
+	c.UnRegisteredVehicleException -triggered for vehicles without proper registration
+	d.TrafficSignalException – triggered during signal synchronization issues
+
+7]String handling 
+	Generate detailed service request summarize and traffic violation notices 
+	Traffic violation Notices Report – violationId ,vehicleRegistrationNo , violationType(overspeeding ) ,fineamount ,time stamp
+
+8]File handling
+	To store traffic violation record in  text format and generate security bills and traffic violation notices as pdf
+
